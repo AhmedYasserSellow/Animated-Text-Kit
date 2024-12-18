@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 /// Abstract base class for text animations.
 abstract class AnimatedText {
-  /// Text for [Text] widget.
+  /// Text for [SelectableText] widget.
   final String text;
 
-  /// [TextAlign] property for [Text] widget.
+  /// [TextAlign] property for [SelectableText] widget.
   ///
   /// By default it is set to [TextAlign.start]
   final TextAlign textAlign;
@@ -41,9 +41,9 @@ abstract class AnimatedText {
   /// Initialize the Animation.
   void initAnimation(AnimationController controller);
 
-  /// Utility method to create a styled [Text] widget using the [textAlign] and
+  /// Utility method to create a styled [SelectableText] widget using the [textAlign] and
   /// [textStyle], but you can specify the [data].
-  Widget textWidget(String data) => Text(
+  Widget textWidget(String data) => SelectableText(
         data,
         textAlign: textAlign,
         style: textStyle,
